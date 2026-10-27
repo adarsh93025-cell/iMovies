@@ -1,0 +1,143 @@
+/* App.css */
+.navbar-imovies {
+  background: rgba(10, 12, 19, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo span {
+  color: var(--primary);
+}
+
+.nav-link-custom {
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Movie Poster Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.poster-wrapper {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #111422;
+}
+
+.poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.imovies-card:hover .poster-img {
+  transform: scale(1.06);
+}
+
+.poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 12, 19, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+/* Screen Curve for Seat Selection */
+.cinema-screen {
+  height: 12px;
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.5);
+  border-radius: 50%;
+  margin: 20px auto 40px auto;
+  width: 70%;
+}
+
+/* Seats */
+.seat-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.seat-available {
+  background: #1e2438;
+  color: #94a3b8;
+}
+
+.seat-available:hover {
+  background: #2a3350;
+  color: #fff;
+  border-color: #38bdf8;
+  transform: scale(1.1);
+}
+
+.seat-selected {
+  background: var(--accent-green);
+  color: #000;
+  border-color: #34d399;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.seat-booked {
+  background: #2a1b22;
+  color: #64748b;
+  border-color: #451a23;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Ticket Card */
+.ticket-stub {
+  background: radial-gradient(circle at top left, transparent 15px, var(--bg-card) 16px) top left,
+              radial-gradient(circle at top right, transparent 15px, var(--bg-card) 16px) top right,
+              radial-gradient(circle at bottom left, transparent 15px, var(--bg-card) 16px) bottom left,
+              radial-gradient(circle at bottom right, transparent 15px, var(--bg-card) 16px) bottom right;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  border: 1px dashed var(--border-color);
+  padding: 30px;
+  border-radius: 16px;
+}

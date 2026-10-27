@@ -1,0 +1,103 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --bg-primary: #0a0c13;
+  --bg-secondary: #121624;
+  --bg-card: #181d2e;
+  --bg-card-hover: #21273d;
+  --primary: #e50914;
+  --primary-hover: #ff2a3b;
+  --primary-glow: rgba(229, 9, 20, 0.4);
+  --accent-gold: #f59e0b;
+  --accent-green: #10b981;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3047;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c4463;
+}
+
+/* Modern Card Glow */
+.imovies-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+}
+
+.imovies-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(229, 9, 20, 0.15);
+}
+
+/* Buttons */
+.btn-imovies {
+  background: linear-gradient(135deg, #e50914, #c80812);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+}
+
+.btn-imovies:hover {
+  background: linear-gradient(135deg, #ff2a3b, #e50914);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.45);
+}
+
+.btn-imovies-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--border-color);
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-imovies-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Glassmorphism nav and modals */
+.glass-panel {
+  background: rgba(18, 22, 36, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+}
